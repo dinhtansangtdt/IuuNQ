@@ -1,56 +1,549 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-  <title>Babybuu iuuuuuuuuuuuuuuuuuuuu</title>
-  <link rel="stylesheet" href="./style.css">
-  <style>
-
-
-    .video-background {
-        position: fixed; 
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover; 
-        z-index: -1; 
-    }
-
-    .content {
-        position: relative;
-        z-index: 1; 
-        text-align: center;
-        padding: 50px;
-        color: white;
-    }
-</style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="img/flowers.png" type="image/x-icon">
+    <title>IUUU NQ</title>
 </head>
-
-<body>
-
-  <h1>Nhật Quy Ơiiii</h1>
-  <button id="playButton" onclick="generateRandomNotifications()"> Nhấn đây nè :< </button>
-  <div class="final-message" id="finalMessage" onclick="redirectToNewPage()">
-    <p id="text1"></p>
-    <p id="text2"></p>
-  </div>
-  <audio id="audioPlayer" src="./TBN.mp3"></audio>
-  <video class="video-background" autoplay muted loop>
-    <source src="nhac.mp4" type="video/mp4">
-  </video> 
-  <script>
+<body class="container">
+  <!-- Pembuat code: https://codepen.io/mdusmanansari/pen/BamepLe -->
+    <div class="night"></div>
+    <div class="flowers">
+      <div class="flower flower--1">
+        <div class="flower__leafs flower__leafs--1">
+          <div class="flower__leaf flower__leaf--1"></div>
+          <div class="flower__leaf flower__leaf--2"></div>
+          <div class="flower__leaf flower__leaf--3"></div>
+          <div class="flower__leaf flower__leaf--4"></div>
+          <div class="flower__white-circle"></div>
+  
+          <div class="flower__light flower__light--1"></div>
+          <div class="flower__light flower__light--2"></div>
+          <div class="flower__light flower__light--3"></div>
+          <div class="flower__light flower__light--4"></div>
+          <div class="flower__light flower__light--5"></div>
+          <div class="flower__light flower__light--6"></div>
+          <div class="flower__light flower__light--7"></div>
+          <div class="flower__light flower__light--8"></div>
+  
+        </div>
+        <div class="flower__line">
+          <div class="flower__line__leaf flower__line__leaf--1"></div>
+          <div class="flower__line__leaf flower__line__leaf--2"></div>
+          <div class="flower__line__leaf flower__line__leaf--3"></div>
+          <div class="flower__line__leaf flower__line__leaf--4"></div>
+          <div class="flower__line__leaf flower__line__leaf--5"></div>
+          <div class="flower__line__leaf flower__line__leaf--6"></div>
+        </div>
+      </div>
+  
+      <div class="flower flower--2">
+        <div class="flower__leafs flower__leafs--2">
+          <div class="flower__leaf flower__leaf--1"></div>
+          <div class="flower__leaf flower__leaf--2"></div>
+          <div class="flower__leaf flower__leaf--3"></div>
+          <div class="flower__leaf flower__leaf--4"></div>
+          <div class="flower__white-circle"></div>
+  
+          <div class="flower__light flower__light--1"></div>
+          <div class="flower__light flower__light--2"></div>
+          <div class="flower__light flower__light--3"></div>
+          <div class="flower__light flower__light--4"></div>
+          <div class="flower__light flower__light--5"></div>
+          <div class="flower__light flower__light--6"></div>
+          <div class="flower__light flower__light--7"></div>
+          <div class="flower__light flower__light--8"></div>
+  
+        </div>
+        <div class="flower__line">
+          <div class="flower__line__leaf flower__line__leaf--1"></div>
+          <div class="flower__line__leaf flower__line__leaf--2"></div>
+          <div class="flower__line__leaf flower__line__leaf--3"></div>
+          <div class="flower__line__leaf flower__line__leaf--4"></div>
+        </div>
+      </div>
+  
+      <div class="flower flower--3">
+        <div class="flower__leafs flower__leafs--3">
+          <div class="flower__leaf flower__leaf--1"></div>
+          <div class="flower__leaf flower__leaf--2"></div>
+          <div class="flower__leaf flower__leaf--3"></div>
+          <div class="flower__leaf flower__leaf--4"></div>
+          <div class="flower__white-circle"></div>
+  
+          <div class="flower__light flower__light--1"></div>
+          <div class="flower__light flower__light--2"></div>
+          <div class="flower__light flower__light--3"></div>
+          <div class="flower__light flower__light--4"></div>
+          <div class="flower__light flower__light--5"></div>
+          <div class="flower__light flower__light--6"></div>
+          <div class="flower__light flower__light--7"></div>
+          <div class="flower__light flower__light--8"></div>
+  
+        </div>
+        <div class="flower__line">
+          <div class="flower__line__leaf flower__line__leaf--1"></div>
+          <div class="flower__line__leaf flower__line__leaf--2"></div>
+          <div class="flower__line__leaf flower__line__leaf--3"></div>
+          <div class="flower__line__leaf flower__line__leaf--4"></div>
+        </div>
+      </div>
+  
+      <div class="grow-ans" style="--d:1.2s">
+        <div class="flower__g-long">
+          <div class="flower__g-long__top"></div>
+          <div class="flower__g-long__bottom"></div>
+        </div>
+      </div>
+  
+      <div class="growing-grass">
+        <div class="flower__grass flower__grass--1">
+          <div class="flower__grass--top"></div>
+          <div class="flower__grass--bottom"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--2"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--3"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--4"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--5"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--6"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--7"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--8"></div>
+          <div class="flower__grass__overlay"></div>
+        </div>
+      </div>
+  
+      <div class="growing-grass">
+        <div class="flower__grass flower__grass--2">
+          <div class="flower__grass--top"></div>
+          <div class="flower__grass--bottom"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--2"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--3"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--4"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--5"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--6"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--7"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--8"></div>
+          <div class="flower__grass__overlay"></div>
+        </div>
+      </div>
+  
+      <div class="grow-ans" style="--d:2.4s">
+        <div class="flower__g-right flower__g-right--1">
+          <div class="leaf"></div>
+        </div>
+      </div>
+  
+      <div class="grow-ans" style="--d:2.8s">
+        <div class="flower__g-right flower__g-right--2">
+          <div class="leaf"></div>
+        </div>
+      </div>
+  
+      <div class="grow-ans" style="--d:2.8s">
+        <div class="flower__g-front">
+          <div class="flower__g-front__leaf-wrapper flower__g-front__leaf-wrapper--1">
+            <div class="flower__g-front__leaf"></div>
+          </div>
+          <div class="flower__g-front__leaf-wrapper flower__g-front__leaf-wrapper--2">
+            <div class="flower__g-front__leaf"></div>
+          </div>
+          <div class="flower__g-front__leaf-wrapper flower__g-front__leaf-wrapper--3">
+            <div class="flower__g-front__leaf"></div>
+          </div>
+          <div class="flower__g-front__leaf-wrapper flower__g-front__leaf-wrapper--4">
+            <div class="flower__g-front__leaf"></div>
+          </div>
+          <div class="flower__g-front__leaf-wrapper flower__g-front__leaf-wrapper--5">
+            <div class="flower__g-front__leaf"></div>
+          </div>
+          <div class="flower__g-front__leaf-wrapper flower__g-front__leaf-wrapper--6">
+            <div class="flower__g-front__leaf"></div>
+          </div>
+          <div class="flower__g-front__leaf-wrapper flower__g-front__leaf-wrapper--7">
+            <div class="flower__g-front__leaf"></div>
+          </div>
+          <div class="flower__g-front__leaf-wrapper flower__g-front__leaf-wrapper--8">
+            <div class="flower__g-front__leaf"></div>
+          </div>
+          <div class="flower__g-front__line"></div>
+        </div>
+      </div>
+  
+      <div class="grow-ans" style="--d:3.2s">
+        <div class="flower__g-fr">
+          <div class="leaf"></div>
+          <div class="flower__g-fr__leaf flower__g-fr__leaf--1"></div>
+          <div class="flower__g-fr__leaf flower__g-fr__leaf--2"></div>
+          <div class="flower__g-fr__leaf flower__g-fr__leaf--3"></div>
+          <div class="flower__g-fr__leaf flower__g-fr__leaf--4"></div>
+          <div class="flower__g-fr__leaf flower__g-fr__leaf--5"></div>
+          <div class="flower__g-fr__leaf flower__g-fr__leaf--6"></div>
+          <div class="flower__g-fr__leaf flower__g-fr__leaf--7"></div>
+          <div class="flower__g-fr__leaf flower__g-fr__leaf--8"></div>
+        </div>
+      </div>
+  
+      <div class="long-g long-g--0">
+        <div class="grow-ans" style="--d:3s">
+          <div class="leaf leaf--0"></div>
+        </div>
+        <div class="grow-ans" style="--d:2.2s">
+          <div class="leaf leaf--1"></div>
+        </div>
+        <div class="grow-ans" style="--d:3.4s">
+          <div class="leaf leaf--2"></div>
+        </div>
+        <div class="grow-ans" style="--d:3.6s">
+          <div class="leaf leaf--3"></div>
+        </div>
+      </div>
+  
+      <div class="long-g long-g--1">
+        <div class="grow-ans" style="--d:3.6s">
+          <div class="leaf leaf--0"></div>
+        </div>
+        <div class="grow-ans" style="--d:3.8s">
+          <div class="leaf leaf--1"></div>
+        </div>
+        <div class="grow-ans" style="--d:4s">
+          <div class="leaf leaf--2"></div>
+        </div>
+        <div class="grow-ans" style="--d:4.2s">
+          <div class="leaf leaf--3"></div>
+        </div>
+      </div>
+  
+      <div class="long-g long-g--2">
+        <div class="grow-ans" style="--d:4s">
+          <div class="leaf leaf--0"></div>
+        </div>
+        <div class="grow-ans" style="--d:4.2s">
+          <div class="leaf leaf--1"></div>
+        </div>
+        <div class="grow-ans" style="--d:4.4s">
+          <div class="leaf leaf--2"></div>
+        </div>
+        <div class="grow-ans" style="--d:4.6s">
+          <div class="leaf leaf--3"></div>
+        </div>
+      </div>
+  
+      <div class="long-g long-g--3">
+        <div class="grow-ans" style="--d:4s">
+          <div class="leaf leaf--0"></div>
+        </div>
+        <div class="grow-ans" style="--d:4.2s">
+          <div class="leaf leaf--1"></div>
+        </div>
+        <div class="grow-ans" style="--d:3s">
+          <div class="leaf leaf--2"></div>
+        </div>
+        <div class="grow-ans" style="--d:3.6s">
+          <div class="leaf leaf--3"></div>
+        </div>
+      </div>
+  
+      <div class="long-g long-g--4">
+        <div class="grow-ans" style="--d:4s">
+          <div class="leaf leaf--0"></div>
+        </div>
+        <div class="grow-ans" style="--d:4.2s">
+          <div class="leaf leaf--1"></div>
+        </div>
+        <div class="grow-ans" style="--d:3s">
+          <div class="leaf leaf--2"></div>
+        </div>
+        <div class="grow-ans" style="--d:3.6s">
+          <div class="leaf leaf--3"></div>
+        </div>
+      </div>
+  
+      <div class="long-g long-g--5">
+        <div class="grow-ans" style="--d:4s">
+          <div class="leaf leaf--0"></div>
+        </div>
+        <div class="grow-ans" style="--d:4.2s">
+          <div class="leaf leaf--1"></div>
+        </div>
+        <div class="grow-ans" style="--d:3s">
+          <div class="leaf leaf--2"></div>
+        </div>
+        <div class="grow-ans" style="--d:3.6s">
+          <div class="leaf leaf--3"></div>
+        </div>
+      </div>
+  
+      <div class="long-g long-g--6">
+        <div class="grow-ans" style="--d:4.2s">
+          <div class="leaf leaf--0"></div>
+        </div>
+        <div class="grow-ans" style="--d:4.4s">
+          <div class="leaf leaf--1"></div>
+        </div>
+        <div class="grow-ans" style="--d:4.6s">
+          <div class="leaf leaf--2"></div>
+        </div>
+        <div class="grow-ans" style="--d:4.8s">
+          <div class="leaf leaf--3"></div>
+        </div>
+      </div>
+  
+      <div class="long-g long-g--7">
+        <div class="grow-ans" style="--d:3s">
+          <div class="leaf leaf--0"></div>
+        </div>
+        <div class="grow-ans" style="--d:3.2s">
+          <div class="leaf leaf--1"></div>
+        </div>
+        <div class="grow-ans" style="--d:3.5s">
+          <div class="leaf leaf--2"></div>
+        </div>
+        <div class="grow-ans" style="--d:3.6s">
+          <div class="leaf leaf--3"></div>
+        </div>
+      </div>
+    </div>
     
-    const playButton = document.getElementById("playButton");
-    const audioPlayer = document.getElementById("audioPlayer");
-
-    playButton.addEventListener("click", function() {
-        audioPlayer.play();
-    });
-</script>
-<script src="./script.js"></script>
-</body>
+    <!-- Ảnh xếp thành hình trái tim -->
+    <div class="heart-images">
+      <div class="heart-image-wrapper" style="--i:0">
+        <img src="img/1.jpg" alt="Image 1" class="heart-image">
+        <div class="rose-petal rose-petal--1"></div>
+        <div class="rose-petal rose-petal--2"></div>
+        <div class="rose-petal rose-petal--3"></div>
+      </div>
+      <div class="heart-image-wrapper" style="--i:1">
+        <img src="img/2.jpg" alt="Image 2" class="heart-image">
+        <div class="rose-petal rose-petal--1"></div>
+        <div class="rose-petal rose-petal--2"></div>
+        <div class="rose-petal rose-petal--3"></div>
+      </div>
+      <div class="heart-image-wrapper" style="--i:2">
+        <img src="img/3.jpg" alt="Image 3" class="heart-image">
+        <div class="rose-petal rose-petal--1"></div>
+        <div class="rose-petal rose-petal--2"></div>
+        <div class="rose-petal rose-petal--3"></div>
+      </div>
+      <div class="heart-image-wrapper" style="--i:3">
+        <img src="img/4.jpg" alt="Image 4" class="heart-image">
+        <div class="rose-petal rose-petal--1"></div>
+        <div class="rose-petal rose-petal--2"></div>
+        <div class="rose-petal rose-petal--3"></div>
+      </div>
+      <div class="heart-image-wrapper" style="--i:4">
+        <img src="img/5.jpg" alt="Image 5" class="heart-image">
+        <div class="rose-petal rose-petal--1"></div>
+        <div class="rose-petal rose-petal--2"></div>
+        <div class="rose-petal rose-petal--3"></div>
+      </div>
+      <div class="heart-image-wrapper" style="--i:5">
+        <img src="img/6.jpg" alt="Image 6" class="heart-image">
+        <div class="rose-petal rose-petal--1"></div>
+        <div class="rose-petal rose-petal--2"></div>
+        <div class="rose-petal rose-petal--3"></div>
+      </div>
+      <div class="heart-image-wrapper" style="--i:6">
+        <img src="img/7.jpg" alt="Image 7" class="heart-image">
+        <div class="rose-petal rose-petal--1"></div>
+        <div class="rose-petal rose-petal--2"></div>
+        <div class="rose-petal rose-petal--3"></div>
+      </div>
+      <div class="heart-image-wrapper" style="--i:7">
+        <img src="img/8.jpg" alt="Image 8" class="heart-image">
+        <div class="rose-petal rose-petal--1"></div>
+        <div class="rose-petal rose-petal--2"></div>
+        <div class="rose-petal rose-petal--3"></div>
+      </div>
+      <div class="heart-image-wrapper" style="--i:8">
+        <img src="img/9.jpg" alt="Image 9" class="heart-image">
+        <div class="rose-petal rose-petal--1"></div>
+        <div class="rose-petal rose-petal--2"></div>
+        <div class="rose-petal rose-petal--3"></div>
+      </div>
+      <div class="heart-image-wrapper" style="--i:9">
+        <img src="img/10.jpg" alt="Image 10" class="heart-image">
+        <div class="rose-petal rose-petal--1"></div>
+        <div class="rose-petal rose-petal--2"></div>
+        <div class="rose-petal rose-petal--3"></div>
+      </div>
+    </div>
+    
+    <!-- Love messages -->
+    <div class="love-messages">
+      <div class="message-title">thương Nhật Quy❤️</div>
+      
+      <div class="message-line" style="--delay: 5s; --show: 5s">
+        <span class="message-text">Anh viết những dòng này không phải vì nhất thời rung động,</span>
+        <span class="floating-heart heart-1">❤️</span>
+        <span class="floating-heart heart-2">💕</span>
+        <span class="floating-heart heart-3">💖</span>
+      </div>
+      
+      <div class="message-line" style="--delay: 11s; --show: 5s">
+        <span class="message-text">Mà vì anh đã nghĩ đến em rất nhiều.</span>
+        <span class="floating-heart heart-1">💗</span>
+        <span class="floating-heart heart-2">❤️</span>
+        <span class="floating-heart heart-3">💕</span>
+      </div>
+      
+      <div class="message-line" style="--delay: 17s; --show: 3s">
+        <span class="message-text">Mỗi lần nhìn thấy em cười,</span>
+        <span class="floating-heart heart-1">💖</span>
+        <span class="floating-heart heart-2">💗</span>
+        <span class="floating-heart heart-3">❤️</span>
+      </div>
+      
+      <div class="message-line" style="--delay: 21s; --show: 5s">
+        <span class="message-text">trái tim anh lại lặng đi một nhịp.</span>
+        <span class="floating-heart heart-1">💕</span>
+        <span class="floating-heart heart-2">💖</span>
+        <span class="floating-heart heart-3">💗</span>
+      </div>
+      
+      <div class="message-line" style="--delay: 27s; --show: 3s">
+        <span class="message-text">Anh không biết từ khi nào...🥰</span>
+        <span class="floating-heart heart-1">❤️</span>
+        <span class="floating-heart heart-2">💕</span>
+        <span class="floating-heart heart-3">💖</span>
+      </div>
+      
+      <div class="message-line" style="--delay: 31s; --show: 5s">
+        <span class="message-text">nhưng em đã trở thành một phần đặc biệt trong anh</span>
+        <span class="floating-heart heart-1">💗</span>
+        <span class="floating-heart heart-2">❤️</span>
+        <span class="floating-heart heart-3">💕</span>
+      </div>
+      
+      <div class="message-line" style="--delay: 37s; --show: 3s">
+        <span class="message-text">Không ồn ào, không rực rỡ ✨</span>
+        <span class="floating-heart heart-1">💖</span>
+        <span class="floating-heart heart-2">💗</span>
+        <span class="floating-heart heart-3">❤️</span>
+      </div>
+      
+      <div class="message-line" style="--delay: 41s; --show: 5s">
+        <span class="message-text">chỉ là sự hiện diện của em làm mọi thứ trở nên dễ chịu hơn.</span>
+        <span class="floating-heart heart-1">💕</span>
+        <span class="floating-heart heart-2">💖</span>
+        <span class="floating-heart heart-3">💗</span>
+      </div>
+      
+      <div class="message-line" style="--delay: 47s; --show: 5s">
+        <span class="message-text">Anh không hứa sẽ mang cả thế giới cho em,</span>
+        <span class="floating-heart heart-1">❤️</span>
+        <span class="floating-heart heart-2">💕</span>
+        <span class="floating-heart heart-3">💖</span>
+      </div>
+      
+      <div class="message-line" style="--delay: 53s; --show: 5s">
+        <span class="message-text">nhưng anh có thể trao em cả trái tim này ❤️‍🔥.</span>
+        <span class="floating-heart heart-1">💗</span>
+        <span class="floating-heart heart-2">❤️</span>
+        <span class="floating-heart heart-3">💕</span>
+      </div>
+      
+      <div class="message-line" style="--delay: 59s; --show: 3s">
+        <span class="message-text">Chỉ cần em muốn,</span>
+        <span class="floating-heart heart-1">💖</span>
+        <span class="floating-heart heart-2">💗</span>
+        <span class="floating-heart heart-3">❤️</span>
+      </div>
+      
+      <div class="message-line" style="--delay: 63s; --show: 3s">
+        <span class="message-text">anh luôn sẵn sàng ở đây,</span>
+        <span class="floating-heart heart-1">💕</span>
+        <span class="floating-heart heart-2">💖</span>
+        <span class="floating-heart heart-3">💗</span>
+      </div>
+      
+      <div class="message-line" style="--delay: 67s; --show: 5s">
+        <span class="message-text">lặng lẽ quan tâm và chờ em quay lại nhìn anh.</span>
+        <span class="floating-heart heart-1">❤️</span>
+        <span class="floating-heart heart-2">💕</span>
+        <span class="floating-heart heart-3">💖</span>
+      </div>
+      
+      <div class="message-line" style="--delay: 73s; --show: 3s">
+        <span class="message-text">Em có thể không hoàn hảo,</span>
+        <span class="floating-heart heart-1">💗</span>
+        <span class="floating-heart heart-2">❤️</span>
+        <span class="floating-heart heart-3">💕</span>
+      </div>
+      
+      <div class="message-line" style="--delay: 77s; --show: 5s">
+        <span class="message-text">nhưng trong mắt anh, em là duy nhất 💯.</span>
+        <span class="floating-heart heart-1">💖</span>
+        <span class="floating-heart heart-2">💗</span>
+        <span class="floating-heart heart-3">❤️</span>
+      </div>
+      
+      <div class="message-line" style="--delay: 83s; --show: 3s">
+        <span class="message-text">Không cần quá nhiều lý do,</span>
+        <span class="floating-heart heart-1">💕</span>
+        <span class="floating-heart heart-2">💖</span>
+        <span class="floating-heart heart-3">💗</span>
+      </div>
+      
+      <div class="message-line" style="--delay: 87s; --show: 5s">
+        <span class="message-text">chỉ đơn giản là... anh thích em ☺️</span>
+        <span class="floating-heart heart-1">❤️</span>
+        <span class="floating-heart heart-2">💕</span>
+        <span class="floating-heart heart-3">💖</span>
+      </div>
+      
+      <div class="message-line" style="--delay: 93s; --show: 5s">
+        <span class="message-text">Thích ánh mắt ấy, nụ cười ấy, cách em bước qua đời anh nhẹ nhàng.</span>
+        <span class="floating-heart heart-1">💗</span>
+        <span class="floating-heart heart-2">❤️</span>
+        <span class="floating-heart heart-3">💕</span>
+      </div>
+      
+      <div class="message-line" style="--delay: 99s; --show: 5s">
+        <span class="message-text">Nếu em cũng có chút gì đó giống anh...</span>
+        <span class="floating-heart heart-1">💖</span>
+        <span class="floating-heart heart-2">💗</span>
+        <span class="floating-heart heart-3">❤️</span>
+      </div>
+      
+      <div class="message-line" style="--delay: 105s; --show: 5s">
+        <span class="message-text">Thì cho anh một cơ hội, được ở bên cạnh em.</span>
+        <span class="floating-heart heart-1">💕</span>
+        <span class="floating-heart heart-2">💖</span>
+        <span class="floating-heart heart-3">💗</span>
+      </div>
+      
+      <div class="message-line" style="--delay: 111s; --show: 3s">
+        <span class="message-text">Thật lòng.</span>
+        <span class="floating-heart heart-1">❤️</span>
+        <span class="floating-heart heart-2">💕</span>
+        <span class="floating-heart heart-3">💖</span>
+      </div>
+      
+      <div class="message-line" style="--delay: 115s; --show: 5s">
+        <span class="message-text">Chỉ mình em. Anh yêu em ❤️</span>
+        <span class="floating-heart heart-1">💗</span>
+        <span class="floating-heart heart-2">❤️</span>
+        <span class="floating-heart heart-3">💕</span>
+      </div>
+    </div>
+    
+    <!-- Audio player -->
+    <div class="audio-player">
+      <audio id="background-music" loop>
+        <source src="audio/music.mp3" type="audio/mpeg">
+        <source src="audio/music.ogg" type="audio/ogg">
+        <source src="audio/music.wav" type="audio/wav">
+        Trình duyệt của bạn không hỗ trợ phát nhạc.
+      </audio>
+      <button class="music-toggle" id="music-toggle" aria-label="Toggle music">
+        <span class="music-icon">🎵</span>
+      </button>
+    </div>
+    
+    <script src="main.js"></script>
+  </body>
 </html>
